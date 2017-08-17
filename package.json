@@ -1,7 +1,7 @@
 {
   "name": "onmio",
   "version": "0.1.0",
-  "description": "A high contrast, monochrome style css framework.",
+  "description": "A high contrast, monochromatic css framework.",
   "main": "scss/onmio.scss",
   "scripts": {
     "clean": "rimraf dist",
@@ -9,7 +9,9 @@
     "sass-expanded": "node-sass --output-style expanded scss/onmio.scss dist/onmio.css",
     "sass-compressed": "node-sass --output-style compressed scss/onmio.scss dist/onmio.min.css",
     "build": "run-s clean sass",
-    "serve": "browser-sync start -s test --ss dist node_modules/normalize.css -f dist"
+    "watch": "node-sass -w --output-style expanded scss/onmio.scss dist/onmio.css",
+    "serve": "browser-sync start -s test --ss dist node_modules/normalize.css -f dist",
+    "start": "run-p watch serve"
   },
   "repository": {
     "type": "git",

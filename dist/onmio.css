@@ -1,4 +1,42 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 625%;
+}
+
+body {
+  font-size: .16rem;
+  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  color: #1f1f1f;
+  background-color: #d3d3d3;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
+}
+
+.grid .cell {
+  flex: 1;
+}
+
+.positive {
+  color: #1f1f1f !important;
+  background-color: #d3d3d3 !important;
+}
+
+.negative {
+  color: #d3d3d3 !important;
+  background-color: #1f1f1f !important;
 }

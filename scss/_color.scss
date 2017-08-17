@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins/color";
+
+.positive {
+  @include monochromatize($positive-color, $negative-color);
+}
+
+.negative {
+  @include monochromatize($negative-color, $positive-color);
+}

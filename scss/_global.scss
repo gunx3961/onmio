@@ -1,0 +1,19 @@
+@import "variables";
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 625%;
+}
+
+body {
+  font-size: .16rem;
+  font-family: $font-stack;
+  color: $positive-color;
+  background-color: $negative-color;
+}
