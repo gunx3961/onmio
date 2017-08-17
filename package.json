@@ -1,0 +1,40 @@
+{
+  "name": "onmio",
+  "version": "0.1.0",
+  "description": "A high contrast, monochrome style css framework.",
+  "main": "scss/onmio.scss",
+  "scripts": {
+    "clean": "rimraf dist",
+    "sass": "run-s sass-expanded sass-compressed",
+    "sass-expanded": "node-sass --output-style expanded scss/onmio.scss dist/onmio.css",
+    "sass-compressed": "node-sass --output-style compressed scss/onmio.scss dist/onmio.min.css",
+    "build": "run-s clean sass",
+    "serve": "browser-sync start -s test --ss dist node_modules/normalize.css -f dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunx3961/onmio.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "css3",
+    "flexbox",
+    "scss",
+    "sass"
+  ],
+  "author": "Gunx <gunx@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gunx3961/onmio/issues"
+  },
+  "homepage": "https://github.com/gunx3961/onmio#readme",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1"
+  }
+}
