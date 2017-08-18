@@ -17,6 +17,11 @@ body {
 
   font-family: $font-stack;
   font-size: .16rem;
+
+  & ::selection {
+    background-color: $intermediate-color;
+    color: $negative-color;
+  }
 }
 
 .positive {

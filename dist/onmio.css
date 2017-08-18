@@ -16,6 +16,11 @@ body {
   font-size: .16rem;
 }
 
+body ::selection {
+  background-color: #aaa;
+  color: #eee;
+}
+
 .positive {
   background-color: #eee;
   color: #333;
