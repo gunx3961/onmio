@@ -1,0 +1,24 @@
+@import '../variables';
+
+// Monochromatize by two defined opposite colors
+@mixin monochromatize($positive: true) {
+  $color: $positive-color;
+  $backgound: $negative-color;
+  @if not $positive {
+    $color: $negative-color;
+    $backgound: $positive-color;
+  }
+
+  background-color: $backgound;
+  color: $color;
+
+  // &::selection,
+  // & ::selection {
+  //   background-color: $positive-color;
+  //   color: $negative-color;
+  // }
+  // & span {
+  //   background-color: currentColor;
+  //   color: $backgound;
+  // }
+}

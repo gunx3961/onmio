@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins/monochromatize';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 625%;
+}
+
+body {
+  @include monochromatize;
+
+  font-family: $font-stack;
+  font-size: .16rem;
+}
+
+.positive {
+  @include monochromatize;
+}
+
+.negative {
+  @include monochromatize(false);
+}

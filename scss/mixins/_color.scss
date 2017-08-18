@@ -1,6 +1,0 @@
-
-// Monochromatize by two defined opposite colors
-@mixin monochromatize($positive-color, $negative-color) {
-  color: $positive-color !important;
-  background-color: $negative-color !important;
-}

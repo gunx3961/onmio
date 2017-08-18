@@ -1,4 +1,12 @@
-.container {
-  height: 200px;
-  background: #aaa;
+body {
+  font-size: .24rem;
+}
+
+.test {
+  outline: .01rem dashed #000;
+}
+
+.nested-style-test div {
+  padding: .4rem;
+  text-align: center;
 }

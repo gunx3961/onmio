@@ -37,6 +37,7 @@
     "browser-sync": "^2.18.13",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "sass-lint": "^1.10.2"
   }
 }

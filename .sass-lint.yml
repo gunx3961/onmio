@@ -1,0 +1,4 @@
+options:
+  merge-default-rules: true
+rules:
+  force-pseudo-nesting: 0

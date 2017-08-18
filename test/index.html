@@ -13,9 +13,44 @@
 </head>
 
 <body>
-  <header><h1>onmio</h1></header>
-  <div class="container">
+  <header>
+    <h1><span class="positive">on</span><span class="negative">mio</span></h1>
+  </header>
+  <div class="container nested-style-test test">
+    <h2>Basic nested style</h2>
     
+    <div class="positive">
+      <span>.positive</span>
+      <div class="negative">
+        <span>.negative</span>
+        <div class="positive">
+          <span>.positive</span>
+          <div class="negative">
+            <span>.negative</span>
+            <div class="positive">
+              <span>.positive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="negative">
+      <span>.negative</span>
+      <div class="positive">
+        <span>.positive</span>
+        <div class="negative">
+          <span>.negative</span>
+          <div class="positive">
+            <span>.positive</span>
+            <div class="negative">
+              <span>.negative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <footer></footer>
 </body>

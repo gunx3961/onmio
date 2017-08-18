@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins/color";
+@import 'variables';
+@import 'mixins/monochrome';
 
 .positive {
   @include monochromatize($positive-color, $negative-color);
