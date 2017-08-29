@@ -1,17 +1,100 @@
 // Grid system based on flexbox, inspired by Philip Walton:
 // https://philipwalton.github.io/solved-by-flexbox/demos/grids/
 
+@mixin grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin make-align-self {
+  &-start {
+    align-self: flex-start;
+  }
+
+  &-end {
+    align-self: flex-end;
+  }
+
+  &-center {
+    align-self: center;
+  }
+}
+
+@mixin make-align-items {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+
+  &-center {
+    align-items: center;
+  }
+}
+
+@mixin make-justify-content {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-around {
+    justify-content: space-around;
+  }
+}
+
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  @include grid-container;
 
-  .cell {
+  &.align-items {
+    @include make-align-items;
+  }
+
+  &.justify-content {
+    @include make-justify-content;
+  }
+
+  > .cell,
+  > [class*='cell-'] {
     flex: 1;
+
+    &.align-self {
+      @include make-align-self;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &.oneof-#{$i} {
+      .cell {
+        flex: 0 0 percentage(1 / $i);
+      }
+    }
+
+    .cell-oneof-#{$i} {
+      flex: 0 0 percentage(1 / $i);
+    }
+
+    .cell-#{$i} {
+      flex: 0 0 percentage($i / 12);
+    }
   }
 }

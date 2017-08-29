@@ -32,9 +32,9 @@ body ::selection {
 }
 
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .grid {
@@ -42,6 +42,198 @@ body ::selection {
   flex-wrap: wrap;
 }
 
-.grid .cell {
+.grid.align-items-start {
+  align-items: flex-start;
+}
+
+.grid.align-items-end {
+  align-items: flex-end;
+}
+
+.grid.align-items-center {
+  align-items: center;
+}
+
+.grid.justify-content-start {
+  justify-content: flex-start;
+}
+
+.grid.justify-content-end {
+  justify-content: flex-end;
+}
+
+.grid.justify-content-center {
+  justify-content: center;
+}
+
+.grid.justify-content-between {
+  justify-content: space-between;
+}
+
+.grid.justify-content-around {
+  justify-content: space-around;
+}
+
+.grid > .cell,
+.grid > [class*='cell-'] {
   flex: 1;
+}
+
+.grid > .cell.align-self-start,
+.grid > [class*='cell-'].align-self-start {
+  align-self: flex-start;
+}
+
+.grid > .cell.align-self-end,
+.grid > [class*='cell-'].align-self-end {
+  align-self: flex-end;
+}
+
+.grid > .cell.align-self-center,
+.grid > [class*='cell-'].align-self-center {
+  align-self: center;
+}
+
+.grid.oneof-1 .cell {
+  flex: 0 0 100%;
+}
+
+.grid .cell-oneof-1 {
+  flex: 0 0 100%;
+}
+
+.grid .cell-1 {
+  flex: 0 0 8.33333%;
+}
+
+.grid.oneof-2 .cell {
+  flex: 0 0 50%;
+}
+
+.grid .cell-oneof-2 {
+  flex: 0 0 50%;
+}
+
+.grid .cell-2 {
+  flex: 0 0 16.66667%;
+}
+
+.grid.oneof-3 .cell {
+  flex: 0 0 33.33333%;
+}
+
+.grid .cell-oneof-3 {
+  flex: 0 0 33.33333%;
+}
+
+.grid .cell-3 {
+  flex: 0 0 25%;
+}
+
+.grid.oneof-4 .cell {
+  flex: 0 0 25%;
+}
+
+.grid .cell-oneof-4 {
+  flex: 0 0 25%;
+}
+
+.grid .cell-4 {
+  flex: 0 0 33.33333%;
+}
+
+.grid.oneof-5 .cell {
+  flex: 0 0 20%;
+}
+
+.grid .cell-oneof-5 {
+  flex: 0 0 20%;
+}
+
+.grid .cell-5 {
+  flex: 0 0 41.66667%;
+}
+
+.grid.oneof-6 .cell {
+  flex: 0 0 16.66667%;
+}
+
+.grid .cell-oneof-6 {
+  flex: 0 0 16.66667%;
+}
+
+.grid .cell-6 {
+  flex: 0 0 50%;
+}
+
+.grid.oneof-7 .cell {
+  flex: 0 0 14.28571%;
+}
+
+.grid .cell-oneof-7 {
+  flex: 0 0 14.28571%;
+}
+
+.grid .cell-7 {
+  flex: 0 0 58.33333%;
+}
+
+.grid.oneof-8 .cell {
+  flex: 0 0 12.5%;
+}
+
+.grid .cell-oneof-8 {
+  flex: 0 0 12.5%;
+}
+
+.grid .cell-8 {
+  flex: 0 0 66.66667%;
+}
+
+.grid.oneof-9 .cell {
+  flex: 0 0 11.11111%;
+}
+
+.grid .cell-oneof-9 {
+  flex: 0 0 11.11111%;
+}
+
+.grid .cell-9 {
+  flex: 0 0 75%;
+}
+
+.grid.oneof-10 .cell {
+  flex: 0 0 10%;
+}
+
+.grid .cell-oneof-10 {
+  flex: 0 0 10%;
+}
+
+.grid .cell-10 {
+  flex: 0 0 83.33333%;
+}
+
+.grid.oneof-11 .cell {
+  flex: 0 0 9.09091%;
+}
+
+.grid .cell-oneof-11 {
+  flex: 0 0 9.09091%;
+}
+
+.grid .cell-11 {
+  flex: 0 0 91.66667%;
+}
+
+.grid.oneof-12 .cell {
+  flex: 0 0 8.33333%;
+}
+
+.grid .cell-oneof-12 {
+  flex: 0 0 8.33333%;
+}
+
+.grid .cell-12 {
+  flex: 0 0 100%;
 }

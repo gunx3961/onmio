@@ -1,12 +1,27 @@
 body {
   font-size: .24rem;
+  padding: 0 5%;
 }
 
 .test {
-  outline: .01rem dashed #000;
+  margin: .24rem 0;
 }
 
-.nested-style-test div {
+#nested-style-test div {
+  outline: 2px solid #333;
   padding: .4rem;
   text-align: center;
+}
+
+#grid-system > .grid {
+  margin: .1rem 0;
+}
+
+#grid-system .cell,
+#grid-system [class*="cell-"] {
+  outline: 2px solid #333;
+  outline-offset: -1px;
+  text-align: center;
+  padding: .16rem;
+  height: 100%;
 }
