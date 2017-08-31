@@ -1,0 +1,7 @@
+// Make box-shadow
+// the color of shadow should always be $intermediate-color
+@import '../variables';
+
+@mixin make-box-shadow($horizontal-length, $vertical-length) {
+  box-shadow: $horizontal-length $vertical-length $intermediate-color;
+}

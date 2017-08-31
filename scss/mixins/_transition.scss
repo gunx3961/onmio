@@ -1,0 +1,12 @@
+// Make transition on a set of properties with same duration and timing function
+
+@mixin make-transition($properties, $duration, $timing-function: ease) {
+  $transitions: ();
+
+  @for $i from 1 through length($properties) {
+    $property: nth($properties, $i);
+    $transitions: append($transitions, $property $duration $timing-function, comma);
+  }
+
+  transition: $transitions;
+}
