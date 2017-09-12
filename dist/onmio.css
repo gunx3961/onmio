@@ -1,11 +1,10 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 625%;
 }
 
@@ -14,6 +13,11 @@ body {
   color: #333;
   font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   font-size: .16rem;
+}
+
+body ::-moz-selection {
+  background-color: #aaa;
+  color: #eee;
 }
 
 body ::selection {
@@ -38,258 +42,300 @@ body ::selection {
 }
 
 .grid {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .grid.align-items-start {
-  align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 
 .grid.align-items-end {
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 
 .grid.align-items-center {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .grid.justify-content-start {
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .grid.justify-content-end {
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .grid.justify-content-center {
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .grid.justify-content-between {
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .grid.justify-content-around {
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .grid > .cell,
 .grid > [class*='cell-'] {
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .grid > .cell.align-self-start,
 .grid > [class*='cell-'].align-self-start {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .grid > .cell.align-self-end,
 .grid > [class*='cell-'].align-self-end {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .grid > .cell.align-self-center,
 .grid > [class*='cell-'].align-self-center {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .grid.oneof-1 .cell {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
 }
 
 .grid .cell-oneof-1 {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
 }
 
 .grid .cell-1 {
-  flex: 0 0 8.33333%;
+  -ms-flex: 0 0 8.33333%;
+      flex: 0 0 8.33333%;
 }
 
 .grid.oneof-2 .cell {
-  flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
 }
 
 .grid .cell-oneof-2 {
-  flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
 }
 
 .grid .cell-2 {
-  flex: 0 0 16.66667%;
+  -ms-flex: 0 0 16.66667%;
+      flex: 0 0 16.66667%;
 }
 
 .grid.oneof-3 .cell {
-  flex: 0 0 33.33333%;
+  -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
 }
 
 .grid .cell-oneof-3 {
-  flex: 0 0 33.33333%;
+  -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
 }
 
 .grid .cell-3 {
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
 }
 
 .grid.oneof-4 .cell {
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
 }
 
 .grid .cell-oneof-4 {
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
 }
 
 .grid .cell-4 {
-  flex: 0 0 33.33333%;
+  -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
 }
 
 .grid.oneof-5 .cell {
-  flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
 }
 
 .grid .cell-oneof-5 {
-  flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
 }
 
 .grid .cell-5 {
-  flex: 0 0 41.66667%;
+  -ms-flex: 0 0 41.66667%;
+      flex: 0 0 41.66667%;
 }
 
 .grid.oneof-6 .cell {
-  flex: 0 0 16.66667%;
+  -ms-flex: 0 0 16.66667%;
+      flex: 0 0 16.66667%;
 }
 
 .grid .cell-oneof-6 {
-  flex: 0 0 16.66667%;
+  -ms-flex: 0 0 16.66667%;
+      flex: 0 0 16.66667%;
 }
 
 .grid .cell-6 {
-  flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
 }
 
 .grid.oneof-7 .cell {
-  flex: 0 0 14.28571%;
+  -ms-flex: 0 0 14.28571%;
+      flex: 0 0 14.28571%;
 }
 
 .grid .cell-oneof-7 {
-  flex: 0 0 14.28571%;
+  -ms-flex: 0 0 14.28571%;
+      flex: 0 0 14.28571%;
 }
 
 .grid .cell-7 {
-  flex: 0 0 58.33333%;
+  -ms-flex: 0 0 58.33333%;
+      flex: 0 0 58.33333%;
 }
 
 .grid.oneof-8 .cell {
-  flex: 0 0 12.5%;
+  -ms-flex: 0 0 12.5%;
+      flex: 0 0 12.5%;
 }
 
 .grid .cell-oneof-8 {
-  flex: 0 0 12.5%;
+  -ms-flex: 0 0 12.5%;
+      flex: 0 0 12.5%;
 }
 
 .grid .cell-8 {
-  flex: 0 0 66.66667%;
+  -ms-flex: 0 0 66.66667%;
+      flex: 0 0 66.66667%;
 }
 
 .grid.oneof-9 .cell {
-  flex: 0 0 11.11111%;
+  -ms-flex: 0 0 11.11111%;
+      flex: 0 0 11.11111%;
 }
 
 .grid .cell-oneof-9 {
-  flex: 0 0 11.11111%;
+  -ms-flex: 0 0 11.11111%;
+      flex: 0 0 11.11111%;
 }
 
 .grid .cell-9 {
-  flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
 }
 
 .grid.oneof-10 .cell {
-  flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+      flex: 0 0 10%;
 }
 
 .grid .cell-oneof-10 {
-  flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+      flex: 0 0 10%;
 }
 
 .grid .cell-10 {
-  flex: 0 0 83.33333%;
+  -ms-flex: 0 0 83.33333%;
+      flex: 0 0 83.33333%;
 }
 
 .grid.oneof-11 .cell {
-  flex: 0 0 9.09091%;
+  -ms-flex: 0 0 9.09091%;
+      flex: 0 0 9.09091%;
 }
 
 .grid .cell-oneof-11 {
-  flex: 0 0 9.09091%;
+  -ms-flex: 0 0 9.09091%;
+      flex: 0 0 9.09091%;
 }
 
 .grid .cell-11 {
-  flex: 0 0 91.66667%;
+  -ms-flex: 0 0 91.66667%;
+      flex: 0 0 91.66667%;
 }
 
 .grid.oneof-12 .cell {
-  flex: 0 0 8.33333%;
+  -ms-flex: 0 0 8.33333%;
+      flex: 0 0 8.33333%;
 }
 
 .grid .cell-oneof-12 {
-  flex: 0 0 8.33333%;
+  -ms-flex: 0 0 8.33333%;
+      flex: 0 0 8.33333%;
 }
 
 .grid .cell-12 {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
 }
 
 .btn {
   background-color: #eee;
   color: #333;
-  transition: box-shadow 150ms ease-out, color 150ms ease-out, background-color 150ms ease-out;
-  border: 0.02rem solid #333;
+  border: .02rem solid currentColor;
+  border-left: 0;
+  border-right: 0;
+  transition: color 150ms ease-out;
+  cursor: pointer;
+  margin: .02rem;
+  height: .36rem;
 }
 
-.btn.negative {
-  background-color: #333;
-  color: #eee;
-  border: 0.02rem solid #eee;
+.btn:focus {
+  outline: unset;
 }
 
 .btn:hover {
   background-color: #333;
   color: #eee;
-  box-shadow: 0.02rem 0.03rem #aaa;
-}
-
-.btn:hover.negative {
-  background-color: #eee;
-  color: #333;
-}
-
-.btn:focus {
-  box-shadow: 0.02rem 0.03rem #aaa;
-  outline: unset;
+  border: 0;
 }
 
 .btn:active {
-  background-color: #333;
-  color: #eee;
-  box-shadow: none;
-}
-
-.btn:active.negative {
   background-color: #eee;
   color: #333;
+  transition: 0s;
 }
 
 .btn:disabled {
-  box-shadow: none;
   cursor: not-allowed;
   opacity: .7;
 }
 
-.btn:disabled:hover {
+.btn.negative {
+  background-color: #333;
+  color: #eee;
+}
+
+.btn.negative:hover {
   background-color: #eee;
   color: #333;
 }
 
-.btn:disabled:hover.negative {
+.btn.negative:active {
   background-color: #333;
   color: #eee;
 }

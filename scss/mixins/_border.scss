@@ -1,0 +1,12 @@
+// Make border
+@import '../variables';
+
+@mixin make-horizontal-border {
+  border: .02rem solid currentColor;
+  border-left: 0;
+  border-right: 0;
+}
+
+@mixin clear-border {
+  border: 0;
+}

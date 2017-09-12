@@ -3,53 +3,47 @@
 @import 'mixins/monochrome';
 @import 'mixins/transition';
 @import 'mixins/box-shadow';
+@import 'mixins/border';
 
 .btn {
   @include monochromatize;
-  @include make-transition((box-shadow, color, background-color), 150ms, ease-out);
+  @include make-horizontal-border;
+  transition: color 150ms ease-out;
 
-  // TODO: @mixin make-boder($positive: true)
-  border: .02rem solid $positive-color;
+  cursor: pointer;
+  margin: .02rem;
+  height: .36rem;
 
-  &.negative {
-    @include monochromatize(false);
-    border: .02rem solid $negative-color;
+  &:focus {
+    // TODO: move this to _base.scss
+    // background-color: rgba($intermediate-color, .5);
+    outline: unset;
   }
 
   &:hover {
     @include monochromatize(false);
-    @include make-box-shadow(.02rem, .03rem);
-
-    &.negative {
-      @include monochromatize;
-    }
+    @include clear-border;
   }
 
-  &:focus {
-    @include make-box-shadow(.02rem, .03rem);
-    outline: unset;
+  &:active {
+    @include monochromatize;
+    transition: 0s;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .7;
+  }
+}
+
+.btn.negative {
+  @include monochromatize(false);
+
+  &:hover {
+    @include monochromatize;
   }
 
   &:active {
     @include monochromatize(false);
-    box-shadow: none;
-
-    &.negative {
-      @include monochromatize;
-    }
-  }
-
-  &:disabled {
-    box-shadow: none;
-    cursor: not-allowed;
-    opacity: .7;
-
-    &:hover {
-      @include monochromatize;
-
-      &.negative {
-        @include monochromatize(false);
-      }
-    }
   }
 }

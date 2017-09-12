@@ -87,7 +87,7 @@
       <div class="cell-4 negative">4</div>
     </div>
 
-    <h3>nested & alignment</h3>
+    <h3># nesting & alignment</h3>
     <div class="grid">
       <div class="cell-9 negative">.align-items-center .justify-content-around
         <div class="grid align-items-center justify-content-around">
@@ -122,16 +122,21 @@
 
   </div>
 
-  <div class="container test negative" id="button-test">
+  <div class="container test" id="button-test">
     <h2># Buttons</h2>
 
-    <h3>Raised button</h3>
-    <button class="btn">POSITIVE</button>
-    <button class="btn negative">NEGATIVE</button>
-    <button class="btn" disabled>disabled</button>
-    <button class="btn negative" disabled>disabled</button>
-    <input class="btn" type="button" value="INPUT">
-    <a class="btn" href="#">LINK BTN</a>
+    <div class="positive">
+      <h3>.positive</h3>
+      <button class="btn" ontouchstart="">POSITIVE</button>
+      <button class="btn" disabled>disabled</button>
+      <input class="btn" type="button" value="INPUT">
+      <a class="btn" href="#">LINK BTN</a>
+    </div>
+    <div class="negative">
+      <h3>.negative</h3>
+      <button class="btn negative">NEGATIVE</button>
+      <button class="btn negative" disabled>disabled</button>      
+    </div>
 
     <p>asdf
       <br>
