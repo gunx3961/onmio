@@ -1,10 +1,10 @@
 @import '../variables';
 
 // Monochromatize by two defined opposite colors
-@mixin monochromatize($positive: true) {
+@mixin monochromatize($is-positive: true) {
   $color: $positive-color;
   $backgound: $negative-color;
-  @if not $positive {
+  @if not $is-positive {
     $color: $negative-color;
     $backgound: $positive-color;
   }

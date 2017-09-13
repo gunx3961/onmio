@@ -1,3 +1,13 @@
-@mixin make-button($mode: positive) {
+@import './monochrome';
 
+@mixin monochromatize-button($is-positive: true) {
+  @include monochromatize($is-positive);
+
+  &:hover {
+    @include monochromatize(not $is-positive);
+  }
+
+  &:active {
+    @include monochromatize($is-positive);
+  }
 }

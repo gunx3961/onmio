@@ -1,12 +1,12 @@
 // Buttons
 @import 'variables';
-@import 'mixins/monochrome';
+@import 'mixins/button';
 @import 'mixins/transition';
 @import 'mixins/box-shadow';
 @import 'mixins/border';
 
+// Basic button style
 .btn {
-  @include monochromatize;
   @include make-horizontal-border;
   transition: color 150ms ease-out;
 
@@ -15,35 +15,25 @@
   height: .36rem;
 
   &:focus {
-    // TODO: move this to _base.scss
-    // background-color: rgba($intermediate-color, .5);
-    outline: unset;
+    background-color: $fucus-color;
   }
 
   &:hover {
-    @include monochromatize(false);
     @include clear-border;
-  }
-
-  &:active {
-    @include monochromatize;
-    transition: 0s;
   }
 
   &:disabled {
     cursor: not-allowed;
     opacity: .7;
   }
-}
-
-.btn.negative {
-  @include monochromatize(false);
-
-  &:hover {
-    @include monochromatize;
-  }
 
   &:active {
-    @include monochromatize(false);
+    transition: 0s;
+  }
+}
+
+@each $mode, $is-positive in $modes {
+  .btn-#{$mode} {
+    @include monochromatize-button($is-positive)
   }
 }

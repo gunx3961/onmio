@@ -1,8 +1,10 @@
 $positive-color: #333;
 $negative-color: #eee;
-// $intermediate-color: rgba($positive-color, .3);
 // TODO: calculate intermediate-color form given positive-color
-$intermediate-color: #aaa;
+$intermediate-color: #999;
+$fucus-color: rgba($intermediate-color, .5);
+
+$modes: (positive: true, negative: false);
 
 // https://github.com/zenozeng/fonts.css
 // Copyright (C) 2013-2015 Zeno Zeng
