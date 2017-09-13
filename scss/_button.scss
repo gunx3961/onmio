@@ -7,19 +7,14 @@
 
 // Basic button style
 .btn {
-  @include make-horizontal-border;
+  @include button-size($button-padding-vertical, $button-padding-horizontal, $font-size-l1, $button-line-height);
   transition: color 150ms ease-out;
 
   cursor: pointer;
   margin: .02rem;
-  height: .36rem;
 
   &:focus {
     background-color: $fucus-color;
-  }
-
-  &:hover {
-    @include clear-border;
   }
 
   &:disabled {
@@ -36,4 +31,13 @@
   .btn-#{$mode} {
     @include monochromatize-button($is-positive)
   }
+}
+
+.btn-lg {
+  @include button-size($button-lg-padding-vertical, $button-lg-padding-horizontal, $font-size-l2, $button-lg-line-height);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }

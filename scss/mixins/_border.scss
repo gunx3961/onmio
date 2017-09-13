@@ -1,8 +1,13 @@
 // Make border
 @import '../variables';
 
-@mixin make-horizontal-border {
-  border: .02rem solid currentColor;
+@mixin make-horizontal-border($is-positive: true) {
+  $border-color: $positive-color;
+  @if not $is-positive {
+    $border-color: $negative-color;
+  }
+
+  border: .02rem solid $border-color;
   border-left: 0;
   border-right: 0;
 }

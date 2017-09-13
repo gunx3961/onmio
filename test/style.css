@@ -1,5 +1,4 @@
 body {
-  font-size: .24rem;
   padding: 0 5%;
 }
 
@@ -13,7 +12,8 @@ body {
   text-align: center;
 }
 
-#grid-system > .grid {
+#grid-system > .grid,
+#button-test .btn {
   margin: .1rem 0;
 }
 
@@ -24,4 +24,8 @@ body {
   text-align: center;
   padding: .16rem;
   height: 100%;
+}
+
+#button-test > div {
+  padding: .1rem;
 }

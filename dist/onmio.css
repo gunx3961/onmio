@@ -12,17 +12,21 @@ body {
   background-color: #eee;
   color: #333;
   font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  font-size: .16rem;
+  font-size: 0.16rem;
 }
 
 body ::-moz-selection {
-  background-color: #aaa;
+  background-color: #999;
   color: #eee;
 }
 
 body ::selection {
-  background-color: #aaa;
+  background-color: #999;
   color: #eee;
+}
+
+*:focus {
+  outline: none;
 }
 
 .positive {
@@ -293,31 +297,16 @@ body ::selection {
 }
 
 .btn {
-  background-color: #eee;
-  color: #333;
-  border: .02rem solid currentColor;
-  border-left: 0;
-  border-right: 0;
+  padding: 0.02rem 0.04rem;
+  font-size: 0.2rem;
+  line-height: 0.2rem;
   transition: color 150ms ease-out;
   cursor: pointer;
   margin: .02rem;
-  height: .36rem;
 }
 
 .btn:focus {
-  outline: unset;
-}
-
-.btn:hover {
-  background-color: #333;
-  color: #eee;
-  border: 0;
-}
-
-.btn:active {
-  background-color: #eee;
-  color: #333;
-  transition: 0s;
+  background-color: rgba(153, 153, 153, 0.5);
 }
 
 .btn:disabled {
@@ -325,17 +314,67 @@ body ::selection {
   opacity: .7;
 }
 
-.btn.negative {
+.btn:active {
+  transition: 0s;
+}
+
+.btn-positive {
+  background-color: #eee;
+  color: #333;
+  border: 0.02rem solid #333;
+  border-left: 0;
+  border-right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.btn-positive:hover {
   background-color: #333;
   color: #eee;
 }
 
-.btn.negative:hover {
+.btn-positive:active {
   background-color: #eee;
   color: #333;
 }
 
-.btn.negative:active {
+.btn-negative {
   background-color: #333;
   color: #eee;
+  border: 0.02rem solid #eee;
+  border-left: 0;
+  border-right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.btn-negative:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn-negative:active {
+  background-color: #333;
+  color: #eee;
+}
+
+.btn-lg {
+  padding: 0.02rem 0.08rem;
+  font-size: 0.24rem;
+  line-height: 0.28rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }

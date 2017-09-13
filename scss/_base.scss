@@ -15,7 +15,7 @@ body {
   @include monochromatize;
 
   font-family: $font-stack;
-  font-size: .16rem;
+  font-size: $font-size-normal;
 
   & ::selection {
     background-color: $intermediate-color;

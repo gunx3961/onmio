@@ -2,6 +2,12 @@
 
 @mixin monochromatize-button($is-positive: true) {
   @include monochromatize($is-positive);
+  @include make-horizontal-border($is-positive);
+
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
 
   &:hover {
     @include monochromatize(not $is-positive);
@@ -10,4 +16,11 @@
   &:active {
     @include monochromatize($is-positive);
   }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
 }

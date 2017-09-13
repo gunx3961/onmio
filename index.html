@@ -10,32 +10,18 @@
   <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="dist/onmio.css">
-  <link rel="stylesheet" href="test/style.css">  
+  <link rel="stylesheet" href="test/style.css">
 </head>
 
 <body>
-    <header>
-      <h1><span class="positive">on</span><span class="negative">mio</span></h1>
-    </header>
-    <div class="container test" id="nested-style-test">
-      <h2># Basic nested style</h2>
-  
-      <div class="positive">
-        <span>.positive</span>
-        <div class="negative">
-          <span>.negative</span>
-          <div class="positive">
-            <span>.positive</span>
-            <div class="negative">
-              <span>.negative</span>
-              <div class="positive">
-                <span>.positive</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
+  <header>
+    <h1><span class="positive">on</span><span class="negative">mio</span></h1>
+  </header>
+  <div class="container test" id="nested-style-test">
+    <h2># Basic nested style</h2>
+
+    <div class="positive">
+      <span>.positive</span>
       <div class="negative">
         <span>.negative</span>
         <div class="positive">
@@ -44,109 +30,136 @@
             <span>.negative</span>
             <div class="positive">
               <span>.positive</span>
-              <div class="negative">
-                <span>.negative</span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-  
     </div>
-  
-    <div class="container test" id="grid-system">
-      <h2># Grid system</h2>
-  
-      <h3>basic</h3>
-      <div class="grid">
-        <div class="cell-oneof-5 positive">1/5</div>
-        <div class="cell negative">auto</div>
-        <div class="cell-6 positive">6</div>
-      </div>
-  
-      <div class="grid">
-        <div class="cell negative">auto</div>
-        <div class="cell-oneof-4 positive">1/4</div>
-        <div class="cell negative">auto</div>
-      </div>
-  
-      <div class="grid">
-        <div class="cell positive">auto</div>
-        <div class="cell negative">auto</div>
-        <div class="cell positive">auto</div>
-        <div class="cell negative">auto</div>
-      </div>
-  
-      <div class="grid oneof-3 justify-content-around">
-        <div class="cell negative">1/3</div>
-        <div class="cell positive">1/3</div>
-      </div>
-  
-  
-      <div class="grid justify-content-between">
-        <div class="cell-7 positive">7</div>
-        <div class="cell-4 negative">4</div>
-      </div>
-  
-      <h3># nesting & alignment</h3>
-      <div class="grid">
-        <div class="cell-9 negative">.align-items-center .justify-content-around
-          <div class="grid align-items-center justify-content-around">
-            <div class="cell-4 positive">4</div>
-            <div class="cell-7 positive">7
-              <div class="grid oneof-3">
-                <div class="cell negative">1/3</div>
-                <div class="cell positive">1/3</div>
-                <div class="cell negative">1/3</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cell positive">auto</div>
-      </div>
-  
-      <div class="grid align-items-end">
-        <div class="cell-2 positive align-self-start">.align-self-start</div>
-        <div class="cell negative">
-          <p>
-            No man is an island, entire of itself; every man is a piece of the continent, a part of the main.
-          </p>
-        </div>
-        <div class="cell positive">
-          <p>
-            If a clod be washed away by the sea, Europe is the less, as well as if a promontory were, as well as if a manor of thy friend's
-            or of thine own were: any man's death diminishes me, because I am involved in mankind, and therefore never send
-            to know for whom the bells tolls; it tolls for thee.
-          </p>
-        </div>
-      </div>
-  
-    </div>
-  
-    <div class="container test" id="button-test">
-      <h2># Buttons</h2>
-  
+
+    <div class="negative">
+      <span>.negative</span>
       <div class="positive">
-        <h3>.positive</h3>
-        <button class="btn" ontouchstart="">POSITIVE</button>
-        <button class="btn" disabled>disabled</button>
-        <input class="btn" type="button" value="INPUT">
-        <a class="btn" href="#">LINK BTN</a>
+        <span>.positive</span>
+        <div class="negative">
+          <span>.negative</span>
+          <div class="positive">
+            <span>.positive</span>
+            <div class="negative">
+              <span>.negative</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="negative">
-        <h3>.negative</h3>
-        <button class="btn negative">NEGATIVE</button>
-        <button class="btn negative" disabled>disabled</button>      
-      </div>
-  
-      <p>asdf
-        <br>
-        bsdf
-      </p>
     </div>
-  
-  
-    <footer></footer>
-  </body>
+
+  </div>
+
+  <div class="container test" id="grid-system">
+    <h2># Grid system</h2>
+
+    <h3>basic</h3>
+    <div class="grid">
+      <div class="cell-oneof-5 positive">1/5</div>
+      <div class="cell negative">auto</div>
+      <div class="cell-6 positive">6</div>
+    </div>
+
+    <div class="grid">
+      <div class="cell negative">auto</div>
+      <div class="cell-oneof-4 positive">1/4</div>
+      <div class="cell negative">auto</div>
+    </div>
+
+    <div class="grid">
+      <div class="cell positive">auto</div>
+      <div class="cell negative">auto</div>
+      <div class="cell positive">auto</div>
+      <div class="cell negative">auto</div>
+    </div>
+
+    <div class="grid oneof-3 justify-content-around">
+      <div class="cell negative">1/3</div>
+      <div class="cell positive">1/3</div>
+    </div>
+
+
+    <div class="grid justify-content-between">
+      <div class="cell-7 positive">7</div>
+      <div class="cell-4 negative">4</div>
+    </div>
+
+    <h3># nesting & alignment</h3>
+    <div class="grid">
+      <div class="cell-9 negative">.align-items-center .justify-content-around
+        <div class="grid align-items-center justify-content-around">
+          <div class="cell-4 positive">4</div>
+          <div class="cell-7 positive">7
+            <div class="grid oneof-3">
+              <div class="cell negative">1/3</div>
+              <div class="cell positive">1/3</div>
+              <div class="cell negative">1/3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell positive">auto</div>
+    </div>
+
+    <div class="grid align-items-end">
+      <div class="cell-2 positive align-self-start">.align-self-start</div>
+      <div class="cell negative">
+        <p>
+          No man is an island, entire of itself; every man is a piece of the continent, a part of the main.
+        </p>
+      </div>
+      <div class="cell positive">
+        <p>
+          If a clod be washed away by the sea, Europe is the less, as well as if a promontory were, as well as if a manor of thy friend's
+          or of thine own were: any man's death diminishes me, because I am involved in mankind, and therefore never send
+          to know for whom the bells tolls; it tolls for thee.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container test" id="button-test">
+    <h2># Buttons</h2>
+
+    <div class="positive">
+      <h3>.btn-positive</h3>
+      <button class="btn btn-positive" ontouchstart="">POSITIVE</button>
+      <button class="btn btn-positive" disabled>disabled</button>
+      <input class="btn btn-positive" type="button" value="INPUT">
+      <a class="btn btn-positive" href="#">LINK BTN</a>
+      <h3>.btn-lg</h3>
+      <button class="btn btn-positive btn-lg" ontouchstart="">POSITIVE</button>
+      <button class="btn btn-positive btn-lg" disabled>disabled</button>
+      <input class="btn btn-positive btn-lg" type="button" value="INPUT">
+      <a class="btn btn-positive btn-lg" href="#">LINK BTN</a>
+      <h3>.btn-block</h3>
+      <button class="btn btn-positive btn-block" ontouchstart="">BLOCK BTN</button>
+      <button class="btn btn-positive btn-lg btn-block" ontouchstart="">BLOCK BTN LARGE</button>
+    </div>
+    <div class="negative">
+      <h3>.btn-negative</h3>
+      <button class="btn btn-negative">NEGATIVE</button>
+      <button class="btn btn-negative" disabled>disabled</button>
+      <input class="btn btn-negative" type="button" value="INPUT">
+      <a class="btn btn-negative" href="#">LINK BTN</a>
+      <h3>.btn-lg</h3>
+      <button class="btn btn-negative btn-lg" ontouchstart="">POSITIVE</button>
+      <button class="btn btn-negative btn-lg" disabled>disabled</button>
+      <input class="btn btn-negative btn-lg" type="button" value="INPUT">
+      <a class="btn btn-negative btn-lg" href="#">LINK BTN</a>
+      <h3>.btn-block</h3>
+      <button class="btn btn-negative btn-block" ontouchstart="">BLOCK BTN</button>
+      <button class="btn btn-negative btn-lg btn-block" ontouchstart="">BLOCK BTN LARGE</button>
+    </div>
+  </div>
+
+  <footer></footer>
+</body>
+
 
 </html>
